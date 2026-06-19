@@ -1,0 +1,16 @@
+// const { response } = require("express");
+
+fetch("https://jsonplaceholder.typicode.com/posts/5",
+    {
+        method:'PATCH',
+        headers:{
+            'Content-Type':'application/json'
+        },
+        body:JSON.stringify({
+            title:'Title',
+          
+        })
+    }
+)
+.then(response => response.json())
+.then(data => {console.log(data)})
